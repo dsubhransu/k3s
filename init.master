@@ -1,1 +1,5 @@
+MASTER
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--node-ip=10.0.2.195 --flannel-iface=eth0" sh -
+
+WORKER
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--node-ip=10.0.2.69 --flannel-iface=eth0" K3S_URL="https://10.0.2.195:6443" K3S_TOKEN="K10f671be02a6bc2cbce8f7bfb0dacb17ba99f3a10309d9418162c59f831e092819::server:00d3e9a745adb5d7003e6a603633af65" sh -
